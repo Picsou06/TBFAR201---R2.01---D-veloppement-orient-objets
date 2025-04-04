@@ -1,0 +1,24 @@
+package ex03;
+
+import java.util.Arrays;
+
+public class ex03 {
+	public static void main(String[] args) {
+		int[] T1 = new int[10] ;
+		String[] T2 = new String[7] ;
+		int[] T3 = {0, 6, 2, 4, 3} ;
+		String[] T4 = {"bleu","rouge","blanc","vert","mauve","indigo"};
+		Arrays.fill(T1, 5);
+		Arrays.fill(T2, 0, 2, "bleu");
+		System.out.println(Arrays.toString(T1));
+		System.out.println(Arrays.toString(T2));
+		Arrays.sort(T3);
+		Arrays.parallelSort(T4);
+		if (Arrays.equals(T1, T3))
+			System.out.println("T1 et T3 sont égaux!");
+		else
+			System.out.println("T1 et T3 ne sont pas égaux!");
+		int[] T5 = Arrays.copyOfRange(T4, 0, 5);
+
+	}
+}

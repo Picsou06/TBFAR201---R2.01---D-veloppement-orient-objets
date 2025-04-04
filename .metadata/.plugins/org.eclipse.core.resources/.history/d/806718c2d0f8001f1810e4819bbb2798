@@ -1,0 +1,9 @@
+package ex01;
+
+public class TypesPrimitifs {
+	double a = 3 + 2;
+	int b = 3 + 2.5;
+	double d = (3/2);
+	double e = (3/2);
+
+}

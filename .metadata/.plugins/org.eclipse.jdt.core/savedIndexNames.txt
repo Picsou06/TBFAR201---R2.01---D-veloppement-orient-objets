@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\de402549\OneDrive - Université Côte d'Azur\Documents\TBFAR201 - R2.01 - Développement orienté objets\.metadata\.plugins\org.eclipse.jdt.core
+3773760125.index
+249652049.index
+1865797976.index
+2548577003.index

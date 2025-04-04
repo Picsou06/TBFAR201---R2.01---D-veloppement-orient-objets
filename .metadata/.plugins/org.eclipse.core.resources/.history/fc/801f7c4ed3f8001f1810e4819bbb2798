@@ -1,0 +1,29 @@
+package ex02;
+
+public class EnsembleEntierBorne {
+	int MAXIMUM;
+	boolean []element;
+	
+	public EnsembleEntierBorne(int maximum) {
+        this.MAXIMUM = maximum;
+        this.element = new boolean[MAXIMUM + 1];
+    }
+	
+	public void add(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			element[value] = true;
+		}
+	}
+	
+	public void remove(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			element[value] = false;
+		}
+	}
+	
+	public void doesContain(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			return this.element[value];
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package ex01;
+
+public class TypesPrimitifs {
+	public static void main(String[] args) {
+		double a = 3 + 2;
+		//int b = 3 + 2.5;
+		double d = (3/2);
+		double e = (3/2);
+		//int f =  "124";
+		//String g = 5.78;
+		//String h = ""+5.78;
+		String i = "Chat"+"Pitre";
+		char j = 'A';
+		boolean k = (a <= 5.78);
+		boolean l = k && !(d < e);
+    }
+}

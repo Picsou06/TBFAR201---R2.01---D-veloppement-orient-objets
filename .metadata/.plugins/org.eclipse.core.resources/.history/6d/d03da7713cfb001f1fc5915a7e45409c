@@ -1,0 +1,7 @@
+package segment;
+
+import ex01.Point;
+
+public class Segment {
+	public Point
+}

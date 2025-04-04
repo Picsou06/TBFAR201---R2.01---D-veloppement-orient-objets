@@ -1,0 +1,52 @@
+package ex02;
+
+public class EnsembleEntierBorne {
+	int MAXIMUM;
+	boolean []element;
+	
+	public EnsembleEntierBorne(int maximum) {
+        this.MAXIMUM = maximum;
+        this.element = new boolean[MAXIMUM + 1];
+    }
+	
+	public void add(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			element[value] = true;
+		}
+	}
+	
+	public void remove(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			element[value] = false;
+		}
+	}
+	
+	public boolean doesContain(int value) {
+		if (value <= this.MAXIMUM && value >= 0) {
+			return this.element[value];
+		}
+		return false;
+	}
+	
+	public String toString() {
+		String answer = "{";
+		for (int i = 0; i < element.length; i++) {
+		    if (element[i])
+		    	answer += i+", ";
+		}
+		answer = answer.substring(0, answer.length()-10);
+		answer += "}";
+		return answer;
+	}
+	
+	public EnsembleEntierBorne intersect(EnsembleEntierBorne ensemble) {
+		int maximum = (this.MAXIMUM > ensemble.MAXIMUM) ? this.MAXIMUM : ensemble.MAXIMUM;
+		int minimum = (this.MAXIMUM > ensemble.MAXIMUM) ? ensemble.MAXIMUM : this.MAXIMUM;
+		EnsembleEntierBorne answer = new EnsembleEntierBorne(maximum);
+		for (int i = 0; i < minimum; i++) {
+		    if (ensemble.element[i] && this.element[i])
+		    	answer.add(i);
+		}
+		return answer;
+	}
+}

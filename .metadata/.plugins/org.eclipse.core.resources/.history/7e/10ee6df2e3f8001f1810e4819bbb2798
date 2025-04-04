@@ -1,0 +1,50 @@
+package ex02;
+
+public class TestEnsemble {
+	public static void main(String[] args) {
+		EnsembleEntierBorne ensemble1 = new EnsembleEntierBorne(20);
+		EnsembleEntierBorne ensemble2 = new EnsembleEntierBorne(15);
+		
+		ensemble1.add(5);
+		ensemble1.add(7);
+		ensemble1.add(3);
+		
+		ensemble2.add(7);
+		ensemble2.add(5);
+		ensemble2.add(3);
+		ensemble2.remove(3);
+		
+		System.out.println(ensemble1.toString());
+		System.out.println(ensemble2.toString());
+		
+		ensemble2.add(12);
+		System.out.println(ensemble1.intersect(ensemble2));
+		System.out.println(ensemble2.doesContain(12));
+	}
+	
+	public class Eratostene {
+	    public static void main(String[] args) {
+	    	int maxim = 100; // Limite supérieure : modifiez cette valeur selon vos besoins
+	        EnsembleEntierBorne premiers = new EnsembleEntierBorne(maxim);
+	        
+	        // Initialiser l'ensemble avec tous les entiers de 2 à maxim
+	        for (int i = 2; i <= maxim; i++) {
+	            premiers.add(i);
+	        }
+	        
+	        // Pour chaque entier i de 2 à maxim, si i est présent dans l'ensemble,
+	        // retirer tous ses multiples (de 2*i à maxim)
+	        for (int i = 2; i <= maxim; i++) {
+	            if (premiers.doesContain(i)) {
+	                for (int j = 2 * i; j <= maxim; j += i) {
+	                    premiers.remove(j);
+	                }
+	            }
+	        }
+	        
+	        // Affichage des nombres premiers restants dans l'ensemble
+	        System.out.println("Les nombres premiers jusqu'à " + maxim + " sont : " + premiers);
+	    }
+	}
+
+}

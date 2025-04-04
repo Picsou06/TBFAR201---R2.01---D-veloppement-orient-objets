@@ -1,0 +1,13 @@
+package ex02;
+
+public class EnsembleEntierBorne {
+	int MAXIMUM;
+	boolean []element;
+	
+	public EnsembleEntierBorne(int maximum) {
+        this.MAXIMUM = maximum;
+        this.ensemble = new boolean[MAXIMUM + 1]; // Indices de 0 à MAXIMUM
+    }
+
+	
+}

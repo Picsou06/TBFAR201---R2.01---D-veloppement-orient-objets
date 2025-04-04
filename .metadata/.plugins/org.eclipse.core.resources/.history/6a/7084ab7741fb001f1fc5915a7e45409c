@@ -1,0 +1,10 @@
+package segment;
+
+public class Segment {
+	private Point origine;
+	private Point extrémité;
+	
+	public Segment(Point or, Point Ex) {
+		this.origine = or;
+	}
+}

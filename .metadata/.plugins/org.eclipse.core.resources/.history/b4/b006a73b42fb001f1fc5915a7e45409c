@@ -1,0 +1,31 @@
+package segment;
+
+public class Segment {
+	private Point origine;
+	private Point extrémité;
+	
+	public Segment(Point or, Point Ex) {
+		this.setOrigine(or);
+		this.setExtrémité(Ex);
+	}
+
+	public Point getOrigine() {
+		return origine;
+	}
+
+	public void setOrigine(Point origine) {
+		this.origine = origine;
+	}
+
+	public Point getExtrémité() {
+		return extrémité;
+	}
+
+	public void setExtrémité(Point extrémité) {
+		this.extrémité = extrémité;
+	}
+	
+	public float longueur() {
+		
+	}	
+}

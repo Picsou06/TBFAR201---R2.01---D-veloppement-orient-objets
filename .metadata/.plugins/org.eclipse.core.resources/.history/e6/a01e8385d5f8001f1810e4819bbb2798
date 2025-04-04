@@ -1,0 +1,8 @@
+package ex02;
+
+public class TestEnsemble {
+	public static void main(String[] args) {
+		new EnsembleEntierBorne(20);
+		new EnsembleEntierBorne(15);
+	}
+}

@@ -1,0 +1,28 @@
+package compte;
+
+import java.util.Iterator;
+
+public class TestCompte {
+	/*public static void main(String[] args) {
+		Compte user1 = new Compte();
+		Compte user2 = new Compte();
+		
+		user1.deposer(500);
+		user2.deposer(1000);
+		user2.retirer(10);
+		user1.virerVers(75, user2);
+		user1.afficher();
+		user2.afficher();
+	}*/
+	
+	public static void main(String[] args) {
+		Compte[] tab = new Compte[10];
+		for (int i=0; i<10; ++i){
+		    tab[i] = new Compte();
+		    tab[i].deposer(200+100*i);
+		    tab[i].deposer(100*i)
+		    tab[i].afficher();
+		}
+		
+	}
+}

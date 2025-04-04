@@ -1,0 +1,5 @@
+package ex02;
+
+public class Tab1D {
+	public static void main(String[] args) {
+}
