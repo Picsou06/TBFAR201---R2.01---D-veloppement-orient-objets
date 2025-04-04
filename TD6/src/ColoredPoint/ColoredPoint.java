@@ -1,6 +1,5 @@
 package ColoredPoint;
 
-
 import ex01.Point;
 
 import java.awt.*;
@@ -38,19 +37,19 @@ public class ColoredPoint extends Point {
         return color.equals(c);
     }
 
-    public Point projX() {
-        return new ColoredPoint(super.projY().getX(), super.getY(), this.color);
-    }
-
-    public Point projY() {
-        return new ColoredPoint(super.getX(), super.projY().getY(), this.color);
-    }
-
     public Point projX(Color color) {
-        return new ColoredPoint(super.projY().getX(), super.getY(), color);
+        return new ColoredPoint(super.getX(), 0, color);
     }
 
     public Point projY(Color color) {
-        return new ColoredPoint(super.getX(), super.projY().getY(), color);
+        return new ColoredPoint(super.getX(), 0, color);
+    }
+
+    public Point projX() {
+        return new ColoredPoint(super.getX(), 0, this.color);
+    }
+
+    public Point projY() {
+        return new ColoredPoint(0, super.getY(), this.color);
     }
 }
