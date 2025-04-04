@@ -36,7 +36,12 @@ public class Segment {
 	}
 
 	public void setExtrémité(Point extrémité) {
-		if
+		if (extrémité == null) {
+			throw new IllegalArgumentException("Le point d'extrémité ne peut pas être nul.");
+		}
+		if (extrémité.equals(this.origine)) {
+			throw new IllegalArgumentException("Le point d'extrémité ne peut pas être confondu avec le point d'origine.");
+		}
 		this.extrémité = extrémité;
 	}
 	
