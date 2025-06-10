@@ -1,5 +1,7 @@
 package Flotte;
 
+import java.util.Calendar;
+
 public class Avion extends Vehicule{
     private String moteur;
     private int heuresVol;
@@ -12,16 +14,18 @@ public class Avion extends Vehicule{
 
     @Override
     public void calculePrix() {
-        super.calculePrix();
+        int year = Calendar.getInstance().get(Calendar. YEAR);
+        int anneesEcoulees = year - this.getDateAchat();
+        this.setPrixCourant(this.getPrixAchat() * Math.pow(0.99, anneesEcoulees));
         if (moteur.equals("hélices"))
             super.setPrixCourant(super.getPrixCourant() * (1.0 - (int) heuresVol/100 * 0.1));
         else
-            super.setPrixCourant(super.getPrixCourant() * (1.0 - (int) heuresVol/1000 * 0.1));
+            super.setPrixCourant(super.getPrixCourant() * (1.0 - (int) heuresVol/1000 * 0.10));
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\nMoteur: " + moteur + "\nHeures de vol: " + heuresVol;
+        return "Marque: " + this.getMarque() + "\nDate d'achat: " + this.getDateAchat() + "\nPrix d'achat: " + this.getPrixAchat() + "\nPrix courant: " + this.getPrixCourant() + "\nMoteur: " + moteur + "\nHeures de vol: " + heuresVol;
     }
 
     public String getMoteur() {

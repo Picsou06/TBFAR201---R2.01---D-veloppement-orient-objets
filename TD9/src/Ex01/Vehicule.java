@@ -1,8 +1,6 @@
-package Flotte;
+package Ex01;
 
-import java.util.Calendar;
-
-public abstract class Vehicule {
+public class Vehicule {
     private String marque;
     private int dateAchat;
     private double prixAchat;
@@ -48,8 +46,6 @@ public abstract class Vehicule {
         this.prixAchat = prixAchat;
     }
 
-    public abstract void calculePrix();
-
     public void affiche() {
         System.out.println("Marque: " + marque);
         System.out.println("DateAchat: " + dateAchat);
@@ -57,5 +53,13 @@ public abstract class Vehicule {
         System.out.println("PrixCourant: " + prixCourant);
     }
 
-    public abstract String toString();
+    @Override
+    public String toString() {
+        return "Ex01.Vehicule{" +
+                "marque='" + marque + '\'' +
+                ", dateAchat=" + dateAchat +
+                ", prixAchat=" + prixAchat +
+                ", prixCourant=" + prixCourant +
+                '}';
+    }
 }

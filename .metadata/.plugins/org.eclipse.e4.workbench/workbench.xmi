@@ -2526,7 +2526,7 @@
   <commands xmi:id="_v-9HX_jmEe-PTeE2bHOO4g" elementId="org.eclipse.ui.edit.text.recenter" commandName="Recenter" description="Scroll cursor line to center, top and bottom" category="_v-9H4vjmEe-PTeE2bHOO4g"/>
   <commands xmi:id="_v-9HYPjmEe-PTeE2bHOO4g" elementId="org.eclipse.mylyn.builds.ui.commands.OpenBuildElementWithBrowser.url" commandName="Open Build with Browser" category="_v-9H_fjmEe-PTeE2bHOO4g"/>
   <commands xmi:id="_v-9HYfjmEe-PTeE2bHOO4g" elementId="org.eclipse.ui.edit.text.scroll.lineDown" commandName="Scroll Line Down" description="Scroll down one line of text" category="_v-9H4vjmEe-PTeE2bHOO4g"/>
-  <commands xmi:id="_v-9HYvjmEe-PTeE2bHOO4g" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="Toggle Main Toolbar Visibility" description="Toggles the visibility of the window toolbar" category="_v-9H7vjmEe-PTeE2bHOO4g"/>
+  <commands xmi:id="_v-9HYvjmEe-PTeE2bHOO4g" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="Toggle Ex01.Main Toolbar Visibility" description="Toggles the visibility of the window toolbar" category="_v-9H7vjmEe-PTeE2bHOO4g"/>
   <commands xmi:id="_v-9HY_jmEe-PTeE2bHOO4g" elementId="org.eclipse.ui.navigate.openResource" commandName="Open Resource" description="Open an editor on a particular resource" category="_v-9H5fjmEe-PTeE2bHOO4g">
     <parameters xmi:id="_v-9HZPjmEe-PTeE2bHOO4g" elementId="filePath" name="File Path" typeId="org.eclipse.ui.ide.resourcePath"/>
   </commands>

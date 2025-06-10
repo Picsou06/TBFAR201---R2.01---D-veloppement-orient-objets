@@ -35,7 +35,7 @@ public class Voiture extends Vehicule{
 
     @Override
     public String toString() {
-        return super.toString() + "\nCylindree: " + cylindree + "\nNombre de portes: " + nbPortes + "\nPuissance: " + puissance + "\nKilometrage: " + kilometrage;
+        return "Marque: " + this.getMarque() + "\nDate d'achat: " + this.getDateAchat() + "\nPrix d'achat: " + this.getPrixAchat() + "\nPrix courant: " + this.getPrixCourant() + "\nCylindree: " + cylindree + "\nNombre de portes: " + nbPortes + "\nPuissance: " + puissance + "\nKilometrage: " + kilometrage;
     }
 
     public double getCylindree() {
