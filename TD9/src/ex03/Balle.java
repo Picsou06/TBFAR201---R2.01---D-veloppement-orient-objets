@@ -12,7 +12,7 @@ import java.awt.Color;
 public class Balle
 {
 	private Color couleur;
-	private static int n = 0;
+	private static int n = 1; // C'est un blasphème de commencer à 0 pour un ID Madame
 	private int id;
 
     public Balle()
@@ -27,8 +27,14 @@ public class Balle
     	this.id = n++;
     }
 
+    @Override
     public String toString()
     {
-    	return getClass().getName() + id +  " " + couleur;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Balle ")
+                .append(id)
+                .append("  de Couleur : ")
+                .append(couleur.toString());
+        return sb.toString();
     }
 }

@@ -3,7 +3,7 @@ package ex03;
 public class Mail
 {
 	private String de, a, corps;
-	private static int n = 0;
+	private static int n = 1; // C'est un blasphème de commencer à 0 pour un ID Madame
 	private int id;
 
 	public Mail()
@@ -22,8 +22,18 @@ public class Mail
     	this.id = n++;
     }
 
+	@Override
     public String toString()
     {
-    	return getClass().getName() + id + " De : " + de + " A : " + a + " Corps : " + corps;
+		StringBuilder sb = new StringBuilder();
+		sb.append("Mail ")
+				.append(id)
+				.append(" de : ")
+				.append(de)
+				.append(" a : ")
+				.append(a)
+				.append(" avec le corps : ")
+				.append(corps);
+		return sb.toString();
     }
 }
